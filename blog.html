@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Bistro Bloom | Restaurant Rotterdam</title>
+  <meta name="description" content="Lees de laatste recepten, seizoenstips en culinaire verhalen van het team bij Bistro Bloom Rotterdam.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">Bistro <span>Bloom</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#diensten">Menu</a>
+      <a href="index.html#over-ons">Over Ons</a>
+      <a href="index.html#galerij">Galerij</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="blog.html" style="color:var(--terra);">Blog</a>
+      <a href="index.html#contact" class="nav-cta">Reserveren</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ BLOG HERO ============ -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="reveal">
+      <div style="display:inline-flex;align-items:center;gap:8px;color:var(--terra);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;">
+        <i data-lucide="book-open" style="width:16px;height:16px;"></i>
+        Ons Blog
+      </div>
+      <h1>Smaken &amp; <span class="accent">Verhalen</span></h1>
+      <p>Recepten, seizoenstips en het verhaal achter onze gerechten. Vers uit de keuken van Bistro Bloom.</p>
+    </div>
+    <div class="blog-categories reveal">
+      <span class="blog-cat active">Alles</span>
+      <span class="blog-cat">Recepten</span>
+      <span class="blog-cat">Seizoenen</span>
+      <span class="blog-cat">Tips</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG GRID ============ -->
+<section class="section" style="background:var(--bg);padding-top:0;">
+  <div class="container">
+    <div class="blog-grid">
+
+      <article class="blog-card reveal stagger-1">
+        <div class="blog-card-img">
+          <img src="images/hero.jpg" alt="Voorjaarsmenu Bistro Bloom" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Seizoenen</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>10 april 2026</span>
+          </div>
+          <h3>Het Voorjaar op Uw Bord: Ons Nieuwe Menu</h3>
+          <p>Asperges, radijs en verse kruiden nemen de hoofdrol in ons lentemenu. Chef Lisa deelt haar inspiratie en favoriete combinaties voor dit seizoen.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-2">
+        <div class="blog-card-img">
+          <img src="images/about.jpg" alt="Team Bistro Bloom" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Achter de Schermen</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>4 april 2026</span>
+          </div>
+          <h3>Een Kijkje in Onze Keuken op Zondagochtend</h3>
+          <p>Onze zondagsbrunch begint al om 7 uur met vers deeg en marktinkopen. Volg een ochtend mee en ontdek hoe wij ons brunchbuffet samenstellen.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-3">
+        <div class="blog-card-img">
+          <img src="images/detail.jpg" alt="Biologische wijnen" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Wijn</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>28 maart 2026</span>
+          </div>
+          <h3>Biologische Wijnen: Onze Top 5 Favorieten</h3>
+          <p>Onze sommelier selecteerde vijf bijzondere biologische wijnen die perfect passen bij het voorjaarsmenu. Van fris tot vol — er is voor elk gerecht een match.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-4">
+        <div class="blog-card-img">
+          <img src="images/craft.jpg" alt="Perfecte risotto tips" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Recepten</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>22 maart 2026</span>
+          </div>
+          <h3>Het Geheim van een Perfecte Risotto</h3>
+          <p>Geduld, goede bouillon en de juiste rijst. Chef Lisa deelt stap voor stap hoe u thuis een restaurant-waardige risotto bereidt zonder stress.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-5">
+        <div class="blog-card-img">
+          <img src="images/kitchen.jpg" alt="Lokale boeren Rotterdam" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Duurzaamheid</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>15 maart 2026</span>
+          </div>
+          <h3>Onze Boeren: De Mensen Achter de Smaken</h3>
+          <p>Wij werken samen met vijf lokale producenten in Zuid-Holland. Maak kennis met de boeren die dagelijks leveren aan onze keuken en ontdek hun verhaal.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-6">
+        <div class="blog-card-img">
+          <img src="images/carousel.jpg" alt="Tips voor een geslaagd etentje thuis" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Tips</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>8 maart 2026</span>
+          </div>
+          <h3>5 Tips voor een Geslaagd Etentje Thuis</h3>
+          <p>Van de juiste mise en place tot het timen van uw gangen. Onze chef deelt vijf praktische tips waarmee u thuis kookt als een professional.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="reveal">
+      <h2>Meer <span class="accent">Culinaire Inspiratie</span>?</h2>
+      <p>Volg ons op social media of reserveer direct een tafel bij Bistro Bloom.</p>
+      <a href="index.html#contact" class="btn-primary" style="margin:0 auto;">
+        <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+        Reserveer Nu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Bistro <span>Bloom</span></a>
+        <p>Sinds 2018 het adres voor eerlijk, seizoensgebonden eten in Rotterdam. Waar warmte en smaak samenkomen.</p>
+        <div style="display:flex;gap:12px;margin-top:20px;">
+          <a href="#" style="width:36px;height:36px;background:rgba(196,101,74,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--terra-light);"><i data-lucide="instagram" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(196,101,74,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--terra-light);"><i data-lucide="facebook" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(196,101,74,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--terra-light);"><i data-lucide="phone" style="width:16px;height:16px;"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html#diensten">Lunch</a></li>
+          <li><a href="index.html#diensten">Diner</a></li>
+          <li><a href="index.html#diensten">Prive Dining</a></li>
+          <li><a href="index.html#diensten">Catering</a></li>
+          <li><a href="index.html#diensten">Wijnadvies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="index.html#over-ons">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#faq">Veelgestelde Vragen</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Witte de Withstraat 72, Rotterdam</a></li>
+          <li><a href="tel:0107654321"><i data-lucide="phone" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>010-765 4321</a></li>
+          <li><a href="mailto:hallo@bistrobloom.nl"><i data-lucide="mail" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>hallo@bistrobloom.nl</a></li>
+          <li><a href="#"><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Wo-Zo: 12:00 - 22:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bistro Bloom. Alle rechten voorbehouden.</p>
+      <p>Website door <a href="https://www.studiolee.nl" target="_blank" rel="noopener">StudioLee</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STUDIOLEE BADGE ============ -->
+<a href="https://www.studiolee.nl/restaurants" class="studiolee-badge" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+  Website door StudioLee
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => el.classList.add('active'),
+    });
+  });
+
+  gsap.from('.blog-card', {
+    y: 80,
+    opacity: 0,
+    stagger: 0.12,
+    duration: 0.8,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.blog-grid',
+      start: 'top 80%',
+    }
+  });
+
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { y: -8, duration: 0.3, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
+    });
+  });
+
+  document.querySelectorAll('.blog-cat').forEach(cat => {
+    cat.addEventListener('click', () => {
+      document.querySelectorAll('.blog-cat').forEach(c => c.classList.remove('active'));
+      cat.classList.add('active');
+    });
+  });
+
+  gsap.to('.cta-bg', {
+    yPercent: 20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.cta-section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  });
+});
+</script>
+
+</body>
+</html>

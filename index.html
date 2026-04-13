@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bistro Bloom — Restaurant Rotterdam</title>
+  <meta name="description" content="Bistro Bloom is een gezellig bistro-restaurant in Rotterdam. Ontdek onze seizoensgerechten, prive dining en wijnadvies in een warme sfeer.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">Bistro <span>Bloom</span></a>
+    <nav class="nav" id="nav">
+      <a href="#diensten">Menu</a>
+      <a href="#over-ons">Over Ons</a>
+      <a href="#galerij">Galerij</a>
+      <a href="#faq">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact" class="nav-cta">Reserveren</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i data-lucide="utensils" style="width:14px;height:14px;"></i>
+        Bistro Rotterdam
+      </div>
+      <h1>Eten met <em>Smaak en Ziel</em></h1>
+      <p>Bij Bistro Bloom draait alles om eerlijk eten en warme gastvrijheid. Verse ingredienten, ambachtelijke bereidingen en een kaart die meebeweegt met de seizoenen. Schuif aan en proef het verschil.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+          Reserveer Direct
+        </a>
+        <a href="#diensten" class="btn-outline">
+          <i data-lucide="arrow-down" style="width:18px;height:18px;"></i>
+          Bekijk het Menu
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="ticker" style="background:var(--color-accent,#f5a623);padding:12px 0;overflow:hidden;">
+    <div style="display:flex;gap:48px;animation:tickerScroll 20s linear infinite;white-space:nowrap;">
+      <span><iconify-icon icon="lucide:utensils"></iconify-icon> Lunch</span><span><iconify-icon icon="lucide:moon"></iconify-icon> Diner</span><span><iconify-icon icon="lucide:users"></iconify-icon> Privé dining</span><span><iconify-icon icon="lucide:truck"></iconify-icon> Catering</span><span><iconify-icon icon="lucide:leaf"></iconify-icon> Seizoensmenu</span><span><iconify-icon icon="lucide:wine"></iconify-icon> Wijnadvies</span><span><iconify-icon icon="lucide:utensils"></iconify-icon> Lunch</span><span><iconify-icon icon="lucide:moon"></iconify-icon> Diner</span><span><iconify-icon icon="lucide:users"></iconify-icon> Privé dining</span><span><iconify-icon icon="lucide:truck"></iconify-icon> Catering</span><span><iconify-icon icon="lucide:leaf"></iconify-icon> Seizoensmenu</span><span><iconify-icon icon="lucide:wine"></iconify-icon> Wijnadvies</span>
+    </div>
+  </div>
+  <style>@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+  <style>.ticker span{display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:700;color:var(--color-bg,#0a0a0f);text-transform:uppercase;letter-spacing:0.05em;}</style>
+
+
+<!-- ============ SCROLL VIDEO (CANVAS) ============ -->
+<section class="scroll-video-section">
+  <div class="pin-wrap" id="scrollVideoPin">
+    <canvas id="scrollCanvas" width="1280" height="720"></canvas>
+    <div class="scroll-video-overlay">
+      <p><i data-lucide="mouse" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:6px;"></i> Scroll om onze bistro te ontdekken</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services section" id="diensten">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Wat Wij <span class="accent">Bieden</span></h2>
+      <p class="section-subtitle">Van een ontspannen lunch tot een intiem diner met wijnbegeleiding — bij Bistro Bloom voelt iedereen zich thuis.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal stagger-1">
+        <div class="service-icon"><i data-lucide="utensils"></i></div>
+        <h3>Lunch</h3>
+        <p>Verse salades, huisgebakken focaccia en warme gerechten die dagelijks wisselen. Onze lunch is de perfecte pauze in een drukke dag, met altijd een vegetarische optie.</p>
+      </div>
+      <div class="service-card reveal stagger-2">
+        <div class="service-icon"><i data-lucide="moon"></i></div>
+        <h3>Diner</h3>
+        <p>Ons avondmenu biedt drie tot vijf gangen met seizoensgebonden ingredienten. Van een romige pompoensoep in de herfst tot gegrilde zeebaars in de zomer — altijd verrassend.</p>
+      </div>
+      <div class="service-card reveal stagger-3">
+        <div class="service-icon"><i data-lucide="users"></i></div>
+        <h3>Prive Dining</h3>
+        <p>Vier uw bijzondere moment in onze sfeervolle achterzaal. Plaats voor 4 tot 14 gasten met een op maat samengesteld menu en persoonlijke bediening.</p>
+      </div>
+      <div class="service-card reveal stagger-4">
+        <div class="service-icon"><i data-lucide="truck"></i></div>
+        <h3>Catering</h3>
+        <p>Bistro Bloom bij u op locatie. Van borrelplanken en fingerfood tot complete diners. Wij verzorgen alles met dezelfde aandacht als in ons eigen restaurant.</p>
+      </div>
+      <div class="service-card reveal stagger-5">
+        <div class="service-icon"><i data-lucide="leaf"></i></div>
+        <h3>Seizoensmenu</h3>
+        <p>Elke zes weken vernieuwen wij ons menu volledig. Onze chef werkt direct met lokale tuinders en boeren om de allerbeste producten van het moment op uw bord te brengen.</p>
+      </div>
+      <div class="service-card reveal stagger-6">
+        <div class="service-icon"><i data-lucide="wine"></i></div>
+        <h3>Wijnadvies</h3>
+        <p>Onze sommelier helpt u graag bij het kiezen van de perfecte wijn bij uw gerecht. Van biologische wijnen tot klassieke favorieten — er is voor elke smaak iets bijzonders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="ba-section">
+  <div class="container">
+    <div class="ba-header reveal">
+      <h2 class="section-title">Voor &amp; <span class="accent">Na</span></h2>
+      <p class="section-subtitle" style="margin:0 auto;">Van verse ingredienten tot een prachtig gerecht — bekijk de transformatie op het bord.</p>
+    </div>
+    <div class="ba-container">
+      <img src="images/ba-after.jpg" class="ba-after" alt="Na — het eindresultaat">
+      <img src="images/ba-before.jpg" class="ba-before" id="baBefore" alt="Voor — de verse ingredienten">
+      <div class="ba-label" id="baLabel">Voor</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal stagger-1">
+        <h3 id="stat1">0</h3>
+        <p>Tevreden Gasten</p>
+      </div>
+      <div class="stat-item reveal stagger-2">
+        <h3 id="stat2">0</h3>
+        <p>Jaar Ervaring</p>
+      </div>
+      <div class="stat-item reveal stagger-3">
+        <h3 id="stat3">0</h3>
+        <p>Gerechten per Seizoen</p>
+      </div>
+      <div class="stat-item reveal stagger-4">
+        <h3 id="stat4">0</h3>
+        <p>Google Reviews</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / TEAM ============ -->
+<section class="section" id="over-ons" style="background:var(--bg-warm);">
+  <div class="container about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+    <div class="reveal-left">
+      <img src="images/about.jpg" alt="Over Bistro Bloom — ons team" style="border-radius:var(--radius);box-shadow:var(--shadow-lg);">
+    </div>
+    <div class="reveal-right">
+      <h2 class="section-title">Eerlijk &amp; <span class="accent">Ambachtelijk</span></h2>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.9;margin-bottom:20px;">Bistro Bloom is in 2018 geboren uit de liefde voor eerlijk eten. Eigenaar en chef Lisa gelooft dat de beste gerechten ontstaan wanneer je met respect voor het product kookt. Geen overbodige franje, maar pure smaken die voor zichzelf spreken.</p>
+      <p style="color:var(--text-muted);font-size:1rem;line-height:1.9;margin-bottom:28px;">Ons team is klein maar gedreven. Van de keuken tot de bediening — iedereen draagt bij aan de warme, persoonlijke sfeer waar Bistro Bloom om bekend staat in Rotterdam.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;color:var(--terra);font-size:0.9rem;">
+          <i data-lucide="heart" style="width:18px;height:18px;"></i> Met Liefde Bereid
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;color:var(--terra);font-size:0.9rem;">
+          <i data-lucide="leaf" style="width:18px;height:18px;"></i> Lokale Ingredienten
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;color:var(--terra);font-size:0.9rem;">
+          <i data-lucide="smile" style="width:18px;height:18px;"></i> Huiselijke Sfeer
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials section" id="reviews">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="section-title">Wat Onze <span class="accent">Gasten</span> Zeggen</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Rotterdam heeft ons in het hart gesloten. Lees waarom.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal stagger-1">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+        </div>
+        <blockquote>"Bistro Bloom voelt als thuiskomen. De gerechten zijn simpel maar ongelooflijk smaakvol. Het seizoensmenu met de geitenkaas-tarte was het hoogtepunt van mijn week. Absolute aanrader!"</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">EM</div>
+          <div>
+            <strong>Eva Mulder</strong><br>
+            <span>Vaste gast sinds 2020</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal stagger-2">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+        </div>
+        <blockquote>"We hadden een prive diner voor ons jubileum en het was magisch. Chef Lisa had een speciaal menu bedacht met onze favoriete smaken. De aandacht voor detail was buitengewoon."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RH</div>
+          <div>
+            <strong>Rob Hendriks</strong><br>
+            <span>Prive dining klant</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal stagger-3">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--terra);"></i>
+        </div>
+        <blockquote>"De lunchkaart is echt genieten. Elke keer als ik kom is er iets nieuws. De soep van de dag is altijd een schot in de roos en de focaccia is de beste die ik in Rotterdam heb gehad."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SK</div>
+          <div>
+            <strong>Sanne Kok</strong><br>
+            <span>Wekelijkse lunchgast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery section" id="galerij">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="section-title">Bistro Bloom in <span class="accent">Beeld</span></h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Een kijkje in onze keuken, zaal en de gerechten die ons hart vormen.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="images/hero.jpg" alt="Bistro Bloom interieur" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/craft.jpg" alt="Chef aan het werk" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/project1.jpg" alt="Seizoensgerecht" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/project2.jpg" alt="Dessert" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/kitchen.jpg" alt="Open keuken" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/detail.jpg" alt="Tafel detail" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/about.jpg" alt="Team Bistro Bloom" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/team.jpg" alt="Service team" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/carousel.jpg" alt="Sfeervolle avond" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/cta-bg.jpg" alt="Terras Rotterdam" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="section-title">Veelgestelde <span class="accent">Vragen</span></h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Alles wat u wilt weten over eten bij Bistro Bloom.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Kan ik ook zonder reservering langskomen?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Voor de lunch bent u altijd welkom zonder reservering, mits er plek is. Voor het diner raden wij sterk aan om te reserveren, vooral in het weekend. Online boeken kan 24/7 via onze website.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Zijn er vegetarische en veganistische opties?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Zeker! Ons menu biedt altijd minimaal twee vegetarische en een veganistisch gerecht. Chef Lisa is zelf groot fan van plantaardige keukens en experimenteert graag met groenten als hoofdrol.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Hoe werkt de catering?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Wij bieden catering voor groepen vanaf 10 personen. Neem contact op voor een vrijblijvend gesprek. Wij stellen een menu samen dat past bij uw gelegenheid, seizoen en budget.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Hebben jullie een terras?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Ja! Ons terras aan de Witte de Withstraat biedt plaats aan 24 gasten. Bij mooi weer serveren wij hier zowel lunch als diner. Het terras is verwarmd, dus ook in de herfst kunt u buiten genieten.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Wat zijn de openingstijden?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Wij zijn geopend van woensdag tot en met zondag. Lunch van 12:00 tot 15:00 en diner van 18:00 tot 22:00. Op zondag serveren wij ook een uitgebreide brunch van 10:00 tot 14:00.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section" id="contact">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="reveal">
+      <h2>Zin in een <span class="accent">Smaakvolle Avond</span>?</h2>
+      <p>Reserveer uw tafel bij Bistro Bloom en ontdek waarom Rotterdam zo van ons houdt. Eerste bezoek? Chef Lisa verwelkomt u graag persoonlijk.</p>
+      <a href="#" class="btn-primary" style="margin:0 auto;">
+        <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+        Reserveer Nu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Bistro <span>Bloom</span></a>
+        <p>Sinds 2018 het adres voor eerlijk, seizoensgebonden eten in Rotterdam. Waar warmte en smaak samenkomen.</p>
+        <div style="display:flex;gap:12px;margin-top:20px;">
+          <a href="#" style="width:36px;height:36px;background:rgba(196,101,74,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--terra-light);"><i data-lucide="instagram" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(196,101,74,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--terra-light);"><i data-lucide="facebook" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(196,101,74,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--terra-light);"><i data-lucide="phone" style="width:16px;height:16px;"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#diensten">Lunch</a></li>
+          <li><a href="#diensten">Diner</a></li>
+          <li><a href="#diensten">Prive Dining</a></li>
+          <li><a href="#diensten">Catering</a></li>
+          <li><a href="#diensten">Wijnadvies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="#over-ons">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#faq">Veelgestelde Vragen</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Witte de Withstraat 72, Rotterdam</a></li>
+          <li><a href="tel:0107654321"><i data-lucide="phone" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>010-765 4321</a></li>
+          <li><a href="mailto:hallo@bistrobloom.nl"><i data-lucide="mail" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>hallo@bistrobloom.nl</a></li>
+          <li><a href="#"><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Wo-Zo: 12:00 - 22:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bistro Bloom. Alle rechten voorbehouden.</p>
+      <p>Website door <a href="https://www.studiolee.nl" target="_blank" rel="noopener">StudioLee</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STUDIOLEE BADGE ============ -->
+<a href="https://www.studiolee.nl/restaurants" class="studiolee-badge" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+  Website door StudioLee
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
+
+  // Scroll Reveal
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => el.classList.add('active'),
+    });
+  });
+
+  // Scroll Video Canvas — fallback
+  const canvas = document.getElementById('scrollCanvas');
+  const ctx = canvas.getContext('2d');
+  const fallbackImg = new Image();
+  fallbackImg.src = 'images/craft.jpg';
+  fallbackImg.onload = () => {
+    const hRatio = canvas.width / fallbackImg.width;
+    const vRatio = canvas.height / fallbackImg.height;
+    const ratio = Math.max(hRatio, vRatio);
+    const cx = (canvas.width - fallbackImg.width * ratio) / 2;
+    const cy = (canvas.height - fallbackImg.height * ratio) / 2;
+    ctx.drawImage(fallbackImg, 0, 0, fallbackImg.width, fallbackImg.height, cx, cy, fallbackImg.width * ratio, fallbackImg.height * ratio);
+  };
+
+  // Before/After slider
+  const baBefore = document.getElementById('baBefore');
+  const baLabel = document.getElementById('baLabel');
+  if (baBefore) {
+    const baContainer = baBefore.parentElement;
+    let isDragging = false;
+
+    function updateBA(x) {
+      const rect = baContainer.getBoundingClientRect();
+      let pct = ((x - rect.left) / rect.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      baBefore.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      baLabel.textContent = pct > 50 ? 'Voor' : 'Na';
+      baLabel.style.left = pct > 50 ? '24px' : 'auto';
+      baLabel.style.right = pct > 50 ? 'auto' : '24px';
+    }
+
+    baContainer.addEventListener('mousedown', e => { isDragging = true; updateBA(e.clientX); });
+    window.addEventListener('mousemove', e => { if (isDragging) updateBA(e.clientX); });
+    window.addEventListener('mouseup', () => { isDragging = false; });
+    baContainer.addEventListener('touchstart', e => { isDragging = true; updateBA(e.touches[0].clientX); });
+    window.addEventListener('touchmove', e => { if (isDragging) updateBA(e.touches[0].clientX); });
+    window.addEventListener('touchend', () => { isDragging = false; });
+
+    // Animate reveal
+    gsap.from(baContainer, {
+      scale: 0.9,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.ba-section',
+        start: 'top 75%',
+      }
+    });
+  }
+
+  // Counter animations
+  function animateCounter(id, target, suffix) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => {
+        gsap.to({ val: 0 }, {
+          val: target,
+          duration: 2,
+          ease: 'power2.out',
+          onUpdate: function() {
+            el.textContent = Math.round(this.targets()[0].val).toLocaleString('nl-NL') + suffix;
+          }
+        });
+      },
+      once: true
+    });
+  }
+  animateCounter('stat1', 2800, '+');
+  animateCounter('stat2', 8, '');
+  animateCounter('stat3', 35, '+');
+  animateCounter('stat4', 4.8, '');
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+
+  // Gallery hover
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      gsap.to(item, { scale: 1.03, duration: 0.3, ease: 'power2.out' });
+    });
+    item.addEventListener('mouseleave', () => {
+      gsap.to(item, { scale: 1, duration: 0.3, ease: 'power2.out' });
+    });
+  });
+
+  // Service cards hover
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card.querySelector('.service-icon'), { rotate: 10, scale: 1.15, duration: 0.3 });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card.querySelector('.service-icon'), { rotate: 0, scale: 1, duration: 0.3 });
+    });
+  });
+
+  // Parallax hero
+  gsap.to('.hero-bg', {
+    yPercent: 30,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+    }
+  });
+
+  // Testimonial stagger
+  gsap.from('.testimonial-card', {
+    y: 60,
+    opacity: 0,
+    stagger: 0.15,
+    duration: 0.8,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.testimonials-grid',
+      start: 'top 80%',
+    }
+  });
+
+  // Stats glow
+  gsap.to('.stat-item h3', {
+    textShadow: '0 0 20px rgba(196,101,74,0.4)',
+    repeat: -1,
+    yoyo: true,
+    duration: 2,
+    ease: 'sine.inOut'
+  });
+});
+</script>
+
+</body>
+</html>
